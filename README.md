@@ -1,4 +1,3 @@
-
 # Advanced SQL Analysis of the Northwind Database
 
 ## Project Objective
@@ -44,18 +43,16 @@ FROM
 INNER JOIN
     Customers c ON o.CustomerID = c.CustomerID
 INNER JOIN
-    Employees e ON o.EmployeeID = e.EmployeeID;
+    Employees e ON o.EmployeeID = o.EmployeeID;
 ```
 * **Result Sample:**
+
 | OrderID | CompanyName | FirstName | LastName |
 |:---|:---|:---|:---|
 | 10248 | Vins et alcools Chevalier | Steven | Buchanan |
 | 10249 | Toms Spezialitäten | Michael | Suyama |
 | 10250 | Hanari Carnes | Margaret | Peacock |
-| 10251 | Victuailles en stock | Janet | Leverling |
-| 10252 | Suprêmes délices | Margaret | Peacock |
-
-*(A sample of the first 5 rows is shown for brevity.)*
+*(A sample of the first 3 rows is shown for brevity.)*
 
 ### 2. Products from a Specific Supplier
 * **Objective:** To filter products based on a specific supplier.
@@ -74,6 +71,7 @@ WHERE
     s.CompanyName = 'Exotic Liquids';
 ```
 * **Result:**
+
 | ProductID | CompanyName | ProductName |
 |:---|:---|:---|
 | 1 | Exotic Liquids | Chai |
@@ -95,6 +93,7 @@ WHERE
     ShippedDate > RequiredDate;
 ```
 * **Result Sample:**
+
 | OrderID | RequiredDate | ShippedDate |
 |:---|:---|:---|
 | 10264 | 2016-08-21 | 2016-08-23 |
@@ -119,6 +118,7 @@ ORDER BY
     TotalOrderCost DESC;
 ```
 * **Result Sample:**
+
 | OrderID | TotalOrderCost |
 |:---|:---|
 | 10865 | 16387.5 |
@@ -126,7 +126,6 @@ ORDER BY
 | 11030 | 12615.05 |
 | 10889 | 11380.0 |
 | 10417 | 11188.4 |
-
 *(A sample of the top 5 most expensive orders is shown.)*
 
 ### 5. Customers with No Orders
@@ -145,6 +144,7 @@ WHERE
     o.OrderID IS NULL;
 ```
 * **Result:**
+
 | CustomerID | CompanyName |
 |:---|:---|
 | FISSA | FISSA Fabrica Inter. Salchichas S.A. |
@@ -171,6 +171,7 @@ ORDER BY
     NumberOfOrders DESC;
 ```
 * **Result:**
+
 | FirstName | LastName | NumberOfOrders |
 |:---|:---|:---|
 | Margaret | Peacock | 156 |
@@ -190,10 +191,10 @@ FROM
     Orders;
 ```
 * **Result:**
+
 | FirstOrder | LastOrder |
 |:---|:---|
 | 2016-07-04 | 2018-05-06 |
-
 
 ### 8. Quarterly Order Summary
 * **Objective:** To analyze business activity and identify trends over time.
@@ -216,6 +217,7 @@ ORDER BY
     OrderQuarter;
 ```
 * **Result:**
+
 | OrderQuarter | NumberOfOrders |
 |:---|:---|
 | 2016-Q3 | 70 |
@@ -226,5 +228,6 @@ ORDER BY
 | 2017-Q4 | 120 |
 | 2018-Q1 | 182 |
 | 2018-Q2 | 88 |
-````
+´´´
+
 
