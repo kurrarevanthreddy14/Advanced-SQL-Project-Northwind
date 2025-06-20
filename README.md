@@ -10,6 +10,18 @@ This analysis uses the standard **Northwind** sample database, which models the 
 * **Querying Tool:** DB Browser for SQLite
 
 ---
+## Table of Contents
+* [1. Who was the customer and employee for each order?](#1-who-was-the-customer-and-employee-for-each-order)
+* [2. Which products are supplied by 'Exotic Liquids'?](#2-which-products-are-supplied-by-exotic-liquids)
+* [3. Which orders were shipped late?](#3-which-orders-were-shipped-late)
+* [4. What is the total cost for each order?](#4-what-is-the-total-cost-for-each-order)
+* [5. Which customers have never placed an order?](#5-which-customers-have-never-placed-an-order)
+* [6. Which employees are top performers (handled > 100 orders)?](#6-which-employees-are-top-performers-handled--100-orders)
+* [7. What is the date range of the data?](#7-what-is-the-date-range-of-the-data)
+* [8. How many orders were placed per quarter?](#8-how-many-orders-were-placed-per-quarter)
+
+---
+
 
 ## SQL Analysis: Business Questions & Queries
 
